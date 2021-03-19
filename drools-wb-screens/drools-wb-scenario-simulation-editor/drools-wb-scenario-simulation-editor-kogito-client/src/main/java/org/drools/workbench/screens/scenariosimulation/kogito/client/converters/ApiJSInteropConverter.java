@@ -89,6 +89,8 @@ public class ApiJSInteropConverter {
         toReturn.setDmnName(source.getDmnName());
         toReturn.setSkipFromBuild(source.isSkipFromBuild());
         toReturn.setStateless(source.isStateless());
+        toReturn.setPmmlFilePath(source.getPmmlFilePath());
+        toReturn.setPmmlModelName(source.getPmmlModelName());
         return toReturn;
     }
 

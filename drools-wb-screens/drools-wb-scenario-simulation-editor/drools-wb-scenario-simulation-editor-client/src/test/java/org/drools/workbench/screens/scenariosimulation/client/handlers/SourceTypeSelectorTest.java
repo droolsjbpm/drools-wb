@@ -78,7 +78,7 @@ public class SourceTypeSelectorTest {
     public void addRadioButtons() {
         reset(uploadWidgetMock);
         sourceTypeSelector.addRadioButtons();
-        assertEquals(2, sourceTypeSelector.radioButtonList.size());
+        assertEquals(3, sourceTypeSelector.radioButtonList.size());
         verify(uploadWidgetMock, times(1)).setVisible(false);
 
     }

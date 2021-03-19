@@ -78,6 +78,8 @@ public class JSInteropApiConverter {
             toReturn.setDmnName(source.getDmnName());
             toReturn.setSkipFromBuild(source.getSkipFromBuild());
             toReturn.setStateless(source.getStateless());
+            toReturn.setPmmlFilePath(source.getPmmlFilePath());
+            toReturn.setPmmlModelName(source.getPmmlModelName());
         }
         return toReturn;
     }

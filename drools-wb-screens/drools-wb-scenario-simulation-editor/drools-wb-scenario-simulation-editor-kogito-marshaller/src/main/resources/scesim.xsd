@@ -63,6 +63,8 @@
       <xs:element type="xs:string" name="dmnName" minOccurs="0"/>
       <xs:element type="xs:boolean" name="skipFromBuild" minOccurs="0"/>
       <xs:element type="xs:boolean" name="stateless" minOccurs="0"/>
+      <xs:element type="xs:string" name="pmmlFilePath" minOccurs="0"/>
+      <xs:element type="xs:string" name="pmmlModelName" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="rawValueType">
