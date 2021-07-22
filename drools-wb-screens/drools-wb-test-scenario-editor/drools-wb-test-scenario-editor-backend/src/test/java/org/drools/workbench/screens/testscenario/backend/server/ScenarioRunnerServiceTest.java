@@ -47,7 +47,7 @@ import org.kie.workbench.common.services.shared.project.KieModuleService;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Spy;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.uberfire.backend.vfs.Path;
 import org.uberfire.backend.vfs.PathFactory;
 import org.uberfire.io.IOService;
@@ -209,6 +209,12 @@ public class ScenarioRunnerServiceTest {
     public void testStopWork() throws Exception {
         initKieSession("stopWork.rdrl");
         testScenario("stopWorkTest.scenario", true);
+    }
+
+    @Test
+    public void testMemberOfFormula() throws Exception {
+        initKieSession("findOldestOpenLoan.rdrl");
+        testScenario("findOldestOpenLoan_Pos.scenario", true);
     }
 
     @Test

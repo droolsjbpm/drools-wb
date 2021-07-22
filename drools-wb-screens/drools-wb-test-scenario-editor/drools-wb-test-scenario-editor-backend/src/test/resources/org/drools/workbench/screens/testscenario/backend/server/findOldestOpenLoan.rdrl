@@ -1,0 +1,21 @@
+package org.drools.workbench.screens.testscenario.backend.server;
+
+import java.lang.Number;
+import org.drools.workbench.screens.testscenario.backend.server.model.Borrower;
+import org.drools.workbench.screens.testscenario.backend.server.model.Loan;
+import org.drools.workbench.screens.testscenario.backend.server.model.ReferenceVars;
+
+
+rule "findOldestOpenLoan"
+	dialect "mvel"
+	ruleflow-group "loanFind"
+	when
+		borrower : Borrower( )
+		refVars : ReferenceVars( $arm : armLoanTypes, $conv : convLoanTypes, $fha : fhaLoanTypes)
+		loan : Loan( open == true , borrowerSSN == borrower.ssn , loanType memberOf ($arm) || loanType memberOf ($conv) || loanType memberOf ($fha) )
+		not (loan2 : Loan( open == true , borrowerSSN == borrower.ssn , loanType memberOf ($arm) || loanType memberOf ($conv) || loanType memberOf ($fha) , loanID < loan.loanID ))
+	then
+		modify( borrower ) {
+				setOldestOpenLoan( loan.loanID )
+		}
+end
