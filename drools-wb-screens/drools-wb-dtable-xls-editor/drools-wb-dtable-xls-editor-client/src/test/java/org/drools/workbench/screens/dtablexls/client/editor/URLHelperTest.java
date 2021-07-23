@@ -33,10 +33,10 @@ public class URLHelperTest {
 
         final Path path = mock(Path.class);
 
-        when(path.toURI()).thenReturn("default://master@MySpace/Mortgages/src/main/resources/a & b.drl");
+        when(path.toURI()).thenReturn("default://main@MySpace/Mortgages/src/main/resources/a & b.drl");
 
         final String downloadUrl = URLHelper.getDownloadUrl(path, "clientId");
 
-        assertEquals("dtablexls/file?clientId=clientId&attachmentPath=default%3A%2F%2Fmaster%40MySpace%2FMortgages%2Fsrc%2Fmain%2Fresources%2Fa+%26+b.drl", downloadUrl);
+        assertEquals("dtablexls/file?clientId=clientId&attachmentPath=default%3A%2F%2Fmain%40MySpace%2FMortgages%2Fsrc%2Fmain%2Fresources%2Fa+%26+b.drl", downloadUrl);
     }
 }
