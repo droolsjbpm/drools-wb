@@ -86,6 +86,11 @@
       <artifactId>kie-wb-common-default-editor-client</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>jakarta.inject</groupId>
+      <artifactId>jakarta.inject-api</artifactId>
+    </dependency>
+
     <!-- GWT and GWT Extensions -->
     <dependency>
       <groupId>com.google.gwt</groupId>

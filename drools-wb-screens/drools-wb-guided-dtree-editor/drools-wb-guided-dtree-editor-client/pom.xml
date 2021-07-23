@@ -54,7 +54,7 @@
       <artifactId>errai-security-server</artifactId>
       <exclusions>
         <exclusion>
-          <groupId>org.jboss.spec.javax.annotation</groupId>
+          <groupId>jakarta.annotation</groupId>
           <artifactId>jboss-annotations-api_1.3_spec</artifactId>
         </exclusion>
       </exclusions>
@@ -118,6 +118,15 @@
     <dependency>
       <groupId>org.kie.workbench.widgets</groupId>
       <artifactId>kie-wb-config-resource-widget</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.inject</groupId>
+      <artifactId>jakarta.inject-api</artifactId>
     </dependency>
 
     <!-- Guided Decision Trees -->

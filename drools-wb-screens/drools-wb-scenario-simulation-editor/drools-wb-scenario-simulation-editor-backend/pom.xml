@@ -31,7 +31,7 @@
       <artifactId>errai-security-server</artifactId>
       <exclusions>
         <exclusion>
-          <groupId>org.jboss.spec.javax.annotation</groupId>
+          <groupId>jakarta.annotation</groupId>
           <artifactId>jboss-annotations-api_1.3_spec</artifactId>
         </exclusion>
       </exclusions>
@@ -154,6 +154,19 @@
       <artifactId>slf4j-api</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.inject</groupId>
+      <artifactId>jakarta.inject-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.enterprise</groupId>
+      <artifactId>jakarta.enterprise.cdi-api</artifactId>
+    </dependency>
+
     <!-- Warned by dependency:analyze -->
     <dependency>
       <groupId>org.hamcrest</groupId>
@@ -163,6 +176,12 @@
     <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-dmn-model</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.wildfly.security</groupId>
+      <artifactId>wildfly-elytron</artifactId>
+      <scope>provided</scope>
     </dependency>
     <!-- End dependency:analyze requirements -->
 

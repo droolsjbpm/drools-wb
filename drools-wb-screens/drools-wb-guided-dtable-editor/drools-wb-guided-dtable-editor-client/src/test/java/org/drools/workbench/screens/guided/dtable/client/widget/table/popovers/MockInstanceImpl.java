@@ -21,7 +21,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.enterprise.inject.Instance;
-import javax.enterprise.util.TypeLiteral;
 
 public class MockInstanceImpl<T> implements Instance<T> {
 
@@ -66,11 +65,4 @@ public class MockInstanceImpl<T> implements Instance<T> {
     public Iterator<T> iterator() {
         return instances.iterator();
     }
-
-    @Override
-    public <U extends T> Instance<U> select(TypeLiteral<U> subtype, Annotation... qualifiers) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
 }
